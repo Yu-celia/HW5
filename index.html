@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>日本、台灣與韓國2016-2021入境觀光客比較</title>
+	<style type="text/css">
+		_.highcharts-figure,
+		.highcharts-data-table table {
+		    min-width: 360px;
+		    max-width: 800px;
+		    margin: 1em auto;
+		}
+
+		.highcharts-data-table table {
+		    font-family: Verdana, sans-serif;
+		    border-collapse: collapse;
+		    border: 1px solid #ebebeb;
+		    margin: 10px auto;
+		    text-align: center;
+		    width: 100%;
+		    max-width: 500px;
+		}
+
+		.highcharts-data-table caption {
+		    padding: 1em 0;
+		    font-size: 1.2em;
+		    color: #555;
+		}
+
+		.highcharts-data-table th {
+		    font-weight: 600;
+		    padding: 0.5em;
+		}
+
+		.highcharts-data-table td,
+		.highcharts-data-table th,
+		.highcharts-data-table caption {
+		    padding: 0.5em;
+		}
+
+		.highcharts-data-table thead tr,
+		.highcharts-data-table tr:nth-child(even) {
+		    background: #f8f8f8;
+		}
+
+		.highcharts-data-table tr:hover {
+		    background: #f1f7ff;
+		}
+	</style>
+</head>
+<body>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+	<figure class="highcharts-figure">
+	  <div id="container"></div>
+	  <p class="highcharts-description">
+	    由此圖表可見，在2019年前，也就是沒有疫情前，日本的入境旅客人數，是大大勝過後國及台灣的。
+	    <br>
+	    <br>
+	    但在2019年後，遭到COVID-19的襲擊，無論是日本、台灣或是韓國的旅客入境人數，都受到劇烈影響。
+	    <br>
+	    三國的旅客入境人數大大下滑，但仍可明顯地看見，三國幾乎是等比例的下滑，
+		<br>
+	    三國一起比較之下，日本依舊是擁有最多旅客入境人數，再來是韓國，最後是台灣。
+	    <br>
+	    <br>
+	    台灣在2021年，幾乎可以說是沒有旅客入境的。
+	  </p>
+	</figure>
+	<script type="text/javascript">
+		Highcharts.chart('container', {
+
+		  title: {
+		    text: '日本、台灣與韓國2016-2021入境觀光客比較'
+		  },
+
+		  subtitle: {
+		    text: 'Source: UNWTO'
+		  },
+
+		  yAxis: {
+		    title: {
+		      text: '入境旅客人數(百萬)'
+		    }
+		  },
+
+		  xAxis: {
+		    accessibility: {
+		      rangeDescription: 'Range: 2016 to 2021'
+		    }
+		  },
+
+		  legend: {
+		    layout: 'vertical',
+		    align: 'right',
+		    verticalAlign: 'middle'
+		  },
+
+		  plotOptions: {
+		    series: {
+		      label: {
+		        connectorAllowed: false
+		      },
+		      pointStart: 2016
+		    }
+		  },
+
+		  series: 
+		  [
+
+		  {
+		    name: '日本',
+		    data: [24.0, 28.7, 31.2, 31.9, 4.1,2]
+		  },
+
+		  {
+		    name: '台灣',
+		    data: [10.7, 10.7, 11.1, 11.9, 1.4, 0.1]
+		  }, 
+		  
+		  {
+		    name: '韓國',
+		    data: [17.7, 13.3, 15.3, 17.5, 2.5, 1.0]
+		  }
+
+		  ],
+
+		  responsive: {
+		    rules: [{
+		      condition: {
+		        maxWidth: 500
+		      },
+		      chartOptions: {
+		        legend: {
+		          layout: 'horizontal',
+		          align: 'center',
+		          verticalAlign: 'bottom'
+		        }
+		      }
+		    }]
+		  }
+
+		});
+
+
+	</script>
+
+</body>	
+</html>	
